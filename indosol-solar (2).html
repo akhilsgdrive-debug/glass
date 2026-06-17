@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indosol Solar – India's Next Generation Solar Glass Manufacturing Facility</title>
+<meta name="description" content="Indosol Solar is one of India's most advanced solar glass manufacturers, producing ultra-clear patterned solar glass and ARC-coated front glass for photovoltaic modules. 2,400 TPD capacity supporting 10 GW solar manufacturing.">
+<meta name="keywords" content="solar glass manufacturers India, solar glass manufacturing, solar pattern glass, ultra clear solar glass, ARC solar glass, solar front glass, photovoltaic glass, solar PV glass, back glass solar modules, solar glass plant India">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green-dark: #004638;
+    --green-mid: #0E6B57;
+    --green-light: #1a8a6e;
+    --orange: #ED841E;
+    --orange-light: #f4a050;
+    --charcoal: #111111;
+    --gray-light: #F7F8F9;
+    --white: #FFFFFF;
+    --glass: rgba(255,255,255,0.07);
+    --glass-border: rgba(255,255,255,0.12);
+    --glass-hover: rgba(255,255,255,0.12);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 1.2rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(0,70,56,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.3s;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .nav-logo-mark {
+    width: 40px; height: 40px;
+    background: var(--orange);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; font-size: 18px;
+    color: var(--white);
+    letter-spacing: -1px;
+  }
+  .nav-logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .nav-logo-text span { color: var(--orange); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-cta {
+    background: var(--orange);
+    color: var(--white) !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: var(--orange-light); color: var(--white) !important; }
+
+  /* ── HERO ── */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex; align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #001e17 0%, #003328 40%, #001810 100%);
+  }
+  .hero-bg-anim {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 60% 40%, rgba(14,107,87,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(237,132,30,0.1) 0%, transparent 60%);
+    animation: bgPulse 8s ease-in-out infinite alternate;
+  }
+  @keyframes bgPulse {
+    from { opacity: 0.7; }
+    to   { opacity: 1; }
+  }
+  /* Geometric grid overlay */
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(14,107,87,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,107,87,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  /* Floating orbs */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 10s ease-in-out infinite;
+  }
+  .orb-1 { width: 500px; height: 500px; background: rgba(14,107,87,0.2); top: -100px; right: 5%; animation-delay: 0s; }
+  .orb-2 { width: 300px; height: 300px; background: rgba(237,132,30,0.12); bottom: 10%; left: 10%; animation-delay: -3s; }
+  .orb-3 { width: 200px; height: 200px; background: rgba(0,70,56,0.3); top: 30%; right: 25%; animation-delay: -6s; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+  }
+
+  .hero-content {
+    position: relative; z-index: 10;
+    max-width: 1400px; margin: 0 auto;
+    padding: 8rem 4rem 6rem;
+    display: grid; grid-template-columns: 1fr 420px;
+    gap: 4rem; align-items: center;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(237,132,30,0.12);
+    border: 1px solid rgba(237,132,30,0.3);
+    color: var(--orange);
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.45rem 1.1rem; border-radius: 2px;
+    margin-bottom: 2rem;
+  }
+  .eyebrow-dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; animation: blink 2s infinite; }
+  @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.2;} }
+
+  .hero-headline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(3.2rem, 6vw, 6rem);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.8rem;
+  }
+  .hero-headline .line-accent { color: var(--orange); }
+  .hero-headline .line-green { color: #4fc9a8; }
+
+  .hero-subheadline {
+    font-size: 1.15rem; font-weight: 400;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; font-size: 0.9rem;
+    padding: 0.9rem 2rem;
+    border: none; border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none; display: inline-block;
+  }
+  .btn-primary:hover { background: #f09433; transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; font-size: 0.9rem;
+    padding: 0.9rem 2rem;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 4px; cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    text-decoration: none; display: inline-block;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.06); transform: translateY(-2px); }
+
+  /* KPI CARDS */
+  .hero-kpi-panel {
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .kpi-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+    backdrop-filter: blur(20px);
+    position: relative; overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  .kpi-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--orange), var(--green-mid));
+  }
+  .kpi-card:hover { transform: translateX(-6px); border-color: rgba(237,132,30,0.3); }
+  .kpi-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700; font-size: 2.4rem;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .kpi-value .kpi-unit { font-size: 1.2rem; color: var(--orange); font-weight: 500; }
+  .kpi-label {
+    font-size: 0.8rem; font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite;
+  }
+  .scroll-indicator svg { opacity: 0.5; }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(8px);} }
+
+  /* ── SECTION SHARED ── */
+  section { position: relative; }
+  .section-inner {
+    max-width: 1400px; margin: 0 auto;
+    padding: 7rem 4rem;
+  }
+  .section-eyebrow {
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    color: #111111;
+  }
+  .title-accent { color: var(--orange); }
+  .section-lead {
+    font-size: 1.05rem; color: rgba(30,30,30,0.6);
+    max-width: 640px; line-height: 1.8;
+  }
+
+  /* fade-up animation */
+  .fade-up {
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── OVERVIEW ── */
+  #overview { background: #ffffff; }
+  .overview-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center;
+  }
+  .overview-visual {
+    position: relative; border-radius: 16px; overflow: hidden;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #0E6B57 0%, #004638 50%, #002820 100%);
+  }
+  .overview-visual-inner {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 2rem;
+  }
+  /* SVG factory illustration placeholder */
+  .factory-svg { width: 80%; opacity: 0.9; }
+  .overview-visual-label {
+    position: absolute; bottom: 1.5rem; left: 1.5rem;
+    background: rgba(0,0,0,0.5); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px; padding: 0.7rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.8);
+    font-weight: 500;
+  }
+  .overview-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem; margin-top: 2.5rem;
+  }
+  .stat-block {
+    background: rgba(14,107,87,0.07);
+    border: 1px solid rgba(14,107,87,0.18);
+    border-radius: 10px; padding: 1.2rem;
+  }
+  .stat-block .num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem; font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .stat-block .desc {
+    font-size: 0.78rem; color: rgba(30,30,30,0.5);
+    margin-top: 0.3rem; font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── WHY INDOSOL ── */
+  #why {
+    background: #F7F8F9;
+  }
+  .why-header { text-align: center; margin-bottom: 4rem; }
+  .features-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .feature-card {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 14px;
+    padding: 2rem;
+    position: relative; overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+  .feature-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--green-mid), var(--orange));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .feature-card:hover { transform: translateY(-6px); border-color: rgba(237,132,30,0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+  .feature-card:hover::after { transform: scaleX(1); }
+  .feature-icon {
+    width: 48px; height: 48px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.3rem;
+    font-size: 22px;
+  }
+  .feature-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 1rem;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.01em;
+    color: #111111;
+  }
+  .feature-card p {
+    font-size: 0.875rem; color: rgba(30,30,30,0.55);
+    line-height: 1.7;
+  }
+
+  /* ── PRODUCTS ── */
+  #products { background: #ffffff; }
+  .products-header { text-align: center; margin-bottom: 4rem; }
+  .products-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .product-card {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 16px; overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .product-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
+  .product-visual {
+    height: 220px;
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .pv-1 { background: linear-gradient(135deg, #0a3d2e 0%, #0E6B57 60%, #1a8a6e 100%); }
+  .pv-2 { background: linear-gradient(135deg, #1a0a00 0%, #8a3e00 50%, #ED841E 100%); }
+  .pv-3 { background: linear-gradient(135deg, #0a1a3d 0%, #1a3d8a 60%, #3d6aa8 100%); }
+  .product-visual-label {
+    position: absolute; top: 1rem; left: 1rem;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: rgba(255,255,255,0.5);
+  }
+  .glass-icon {
+    font-size: 5rem; opacity: 0.25;
+    line-height: 1;
+  }
+  .product-body { padding: 1.8rem; }
+  .product-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem; font-weight: 700;
+    color: var(--orange); letter-spacing: 0.2em;
+    text-transform: uppercase; margin-bottom: 0.6rem;
+  }
+  .product-body h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 1.05rem;
+    margin-bottom: 0.9rem; line-height: 1.3;
+    color: #111111;
+  }
+  .product-body p {
+    font-size: 0.85rem; color: rgba(30,30,30,0.55);
+    line-height: 1.7; margin-bottom: 1.3rem;
+  }
+  .product-highlights { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .product-highlights li {
+    font-size: 0.82rem; color: rgba(30,30,30,0.65);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .product-highlights li::before {
+    content: '';
+    width: 16px; height: 16px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--green-mid), var(--green-light));
+    border-radius: 4px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-size: cover;
+  }
+
+  /* ── SPEC TABLE ── */
+  #specs { background: #F7F8F9; }
+  .spec-section { margin-bottom: 5rem; }
+  .spec-section:last-child { margin-bottom: 0; }
+  .spec-table-wrap {
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 14px; overflow: hidden;
+    background: #ffffff;
+  }
+  .spec-table-header {
+    background: linear-gradient(90deg, var(--green-dark), var(--green-mid));
+    padding: 1.2rem 1.8rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .spec-table-header h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 1rem;
+    letter-spacing: 0.03em;
+  }
+  .spec-download-btn {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white; font-size: 0.8rem; font-weight: 600;
+    padding: 0.45rem 1rem; border-radius: 4px;
+    cursor: pointer; transition: background 0.2s;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+  }
+  .spec-download-btn:hover { background: rgba(255,255,255,0.2); }
+  .spec-search {
+    padding: 1rem 1.5rem;
+    background: #fafafa;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .spec-search input {
+    width: 100%; background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 6px; color: #111111;
+    padding: 0.6rem 1rem; font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    outline: none; transition: border-color 0.2s;
+  }
+  .spec-search input::placeholder { color: rgba(30,30,30,0.35); }
+  .spec-search input:focus { border-color: rgba(14,107,87,0.5); }
+  table.spec-table { width: 100%; border-collapse: collapse; }
+  table.spec-table tr { border-bottom: 1px solid rgba(0,0,0,0.04); transition: background 0.15s; }
+  table.spec-table tr:last-child { border-bottom: none; }
+  table.spec-table tr:hover { background: rgba(14,107,87,0.04); }
+  table.spec-table td {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.875rem;
+    vertical-align: top;
+  }
+  table.spec-table td:first-child {
+    color: rgba(30,30,30,0.45);
+    font-weight: 500;
+    width: 42%;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+  }
+  table.spec-table td:last-child {
+    color: rgba(30,30,30,0.85);
+    font-weight: 400;
+  }
+  .spec-highlight { color: var(--orange) !important; font-weight: 600 !important; }
+
+  /* ── MANUFACTURING PROCESS ── */
+  #process { background: #ffffff; }
+  .process-header { text-align: center; margin-bottom: 4rem; }
+  .process-timeline {
+    display: flex; flex-direction: column; gap: 0;
+    max-width: 900px; margin: 0 auto;
+    position: relative;
+  }
+  .process-timeline::before {
+    content: '';
+    position: absolute; left: 50%; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--green-mid) 0%, var(--orange) 100%);
+    transform: translateX(-50%);
+  }
+  .process-step {
+    display: grid; grid-template-columns: 1fr auto 1fr;
+    gap: 2rem; align-items: center;
+    padding: 1.5rem 0;
+  }
+  .process-step:nth-child(odd) .step-content { grid-column: 1; text-align: right; }
+  .process-step:nth-child(odd) .step-spacer { grid-column: 3; }
+  .process-step:nth-child(even) .step-content { grid-column: 3; text-align: left; }
+  .process-step:nth-child(even) .step-spacer { grid-column: 1; }
+  .step-node {
+    grid-column: 2;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    border: 3px solid var(--green-mid);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700; font-size: 1rem;
+    color: #ffffff;
+    position: relative; z-index: 2;
+    flex-shrink: 0;
+    transition: transform 0.3s, border-color 0.3s;
+    cursor: default;
+  }
+  .process-step:hover .step-node { transform: scale(1.15); border-color: var(--orange); }
+  .step-content {
+    background: #F7F8F9;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 10px; padding: 1.2rem 1.5rem;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .process-step:hover .step-content { border-color: rgba(14,107,87,0.3); background: rgba(14,107,87,0.05); }
+  .step-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    color: #111111;
+  }
+  .step-content p { font-size: 0.8rem; color: rgba(30,30,30,0.5); line-height: 1.5; }
+
+  /* ── QUALITY & SUSTAINABILITY ── */
+  #quality {
+    background: #F7F8F9;
+    padding: 7rem 0;
+  }
+  .quality-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem; margin-top: 3.5rem;
+  }
+  .quality-card {
+    border-radius: 14px; overflow: hidden;
+    position: relative;
+  }
+  .quality-card-inner {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 14px; padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .quality-card-inner:hover { transform: translateY(-4px); border-color: rgba(237,132,30,0.25); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+  .quality-icon { font-size: 2.2rem; margin-bottom: 1.2rem; display: block; }
+  .quality-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+    color: #111111;
+  }
+  .quality-card p { font-size: 0.83rem; color: rgba(30,30,30,0.5); line-height: 1.65; }
+
+  /* ── CTA BANNER ── */
+  #cta {
+    background: linear-gradient(135deg, var(--green-dark) 0%, #002e22 50%, #001810 100%);
+    position: relative; overflow: hidden;
+  }
+  #cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 80% 50%, rgba(237,132,30,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 10% 50%, rgba(14,107,87,0.3) 0%, transparent 70%);
+  }
+  .cta-inner {
+    position: relative; z-index: 2;
+    text-align: center;
+    padding: 8rem 4rem;
+    max-width: 800px; margin: 0 auto;
+  }
+  .cta-inner h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05; letter-spacing: -0.02em;
+    margin-bottom: 1.3rem;
+  }
+  .cta-inner p { font-size: 1.1rem; color: rgba(255,255,255,0.6); margin-bottom: 3rem; line-height: 1.7; }
+  .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  /* ── FAQ ── */
+  #faq { background: #ffffff; }
+  .faq-grid { max-width: 860px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  .faq-q {
+    padding: 1.5rem 0;
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; font-size: 1rem;
+    color: rgba(20,20,20,0.85);
+    transition: color 0.2s;
+    gap: 1rem;
+    user-select: none;
+  }
+  .faq-q:hover { color: var(--orange); }
+  .faq-icon {
+    width: 28px; height: 28px; flex-shrink: 0;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0,0,0,0.18);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; color: rgba(30,30,30,0.4);
+    transition: transform 0.3s, border-color 0.3s, color 0.3s;
+    line-height: 1;
+  }
+  .faq-item.open .faq-icon {
+    transform: rotate(45deg);
+    border-color: var(--orange); color: var(--orange);
+  }
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.45s ease, padding 0.3s;
+  }
+  .faq-item.open .faq-a { max-height: 300px; }
+  .faq-a-inner {
+    padding-bottom: 1.5rem;
+    font-size: 0.9rem; color: rgba(30,30,30,0.55);
+    line-height: 1.8; max-width: 90%;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #111111;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 4rem;
+  }
+  .footer-inner {
+    max-width: 1400px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .footer-brand p {
+    font-size: 0.875rem; color: rgba(255,255,255,0.4);
+    margin-top: 1rem; max-width: 300px; line-height: 1.7;
+  }
+  .footer-col h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 0.8rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); margin-bottom: 1.2rem;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.45); text-decoration: none;
+    font-size: 0.875rem; transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--orange); }
+  .footer-bottom {
+    max-width: 1400px; margin: 2.5rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25);
+  }
+  .footer-badge {
+    background: linear-gradient(90deg, var(--green-dark), var(--green-mid));
+    color: rgba(255,255,255,0.7); font-size: 0.7rem;
+    padding: 0.3rem 0.8rem; border-radius: 2px;
+    font-weight: 600; letter-spacing: 0.08em;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1100px) {
+    nav { padding: 1rem 2rem; }
+    .nav-links { gap: 1.5rem; }
+    .hero-content { padding: 8rem 2rem 6rem; grid-template-columns: 1fr; }
+    .hero-kpi-panel { flex-direction: row; flex-wrap: wrap; }
+    .hero-kpi-panel .kpi-card { flex: 1 1 180px; }
+    .section-inner { padding: 5rem 2rem; }
+    .overview-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .products-grid { grid-template-columns: 1fr 1fr; }
+    .quality-grid { grid-template-columns: 1fr 1fr; }
+    .process-timeline::before { left: 28px; }
+    .process-step { grid-template-columns: 1fr; padding: 1rem 0 1rem 70px; }
+    .process-step:nth-child(odd) .step-content,
+    .process-step:nth-child(even) .step-content { grid-column: 1; text-align: left; }
+    .process-step:nth-child(odd) .step-spacer,
+    .process-step:nth-child(even) .step-spacer { display: none; }
+    .step-node { position: absolute; left: 0; }
+    .process-step { position: relative; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  }
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero-headline { font-size: 2.6rem; }
+    .features-grid { grid-template-columns: 1fr; }
+    .products-grid { grid-template-columns: 1fr; }
+    .quality-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+    .hero-kpi-panel { grid-template-columns: 1fr 1fr; display: grid; }
+  }
+
+  /* Print / no-JS fallback */
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════ NAV ═══════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <div class="nav-logo-mark">IS</div>
+    <div class="nav-logo-text">INDOSOL <span>SOLAR</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#overview">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#specs">Specifications</a></li>
+    <li><a href="#process">Technology</a></li>
+    <li><a href="#quality">Quality</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#cta" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════════ HERO ═════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg-anim"></div>
+  <div class="hero-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow fade-up">
+        <span class="eyebrow-dot"></span>
+        Solar Glass Manufacturing Facility — India
+      </div>
+      <h1 class="hero-headline fade-up">
+        India's <span class="line-green">Next Generation</span><br>
+        Solar Glass<br>
+        <span class="line-accent">Manufacturing</span><br>
+        Facility
+      </h1>
+      <p class="hero-subheadline fade-up">
+        Building the foundation of India's renewable energy future through advanced solar glass manufacturing, cutting-edge innovation, and world-class production excellence.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="#overview" class="btn-primary">Explore Facility</a>
+        <a href="#specs" class="btn-outline">Download Brochure</a>
+      </div>
+    </div>
+
+    <div class="hero-kpi-panel">
+      <div class="kpi-card fade-up" style="transition-delay:0.1s">
+        <div class="kpi-value"><span class="kpi-num" data-target="2400">0</span> <span class="kpi-unit">TPD</span></div>
+        <div class="kpi-label">Production Capacity</div>
+      </div>
+      <div class="kpi-card fade-up" style="transition-delay:0.2s">
+        <div class="kpi-value"><span class="kpi-num" data-target="10">0</span> <span class="kpi-unit">GW</span></div>
+        <div class="kpi-label">Equivalent Module Support</div>
+      </div>
+      <div class="kpi-card fade-up" style="transition-delay:0.3s">
+        <div class="kpi-value"><span class="kpi-num" data-target="30">0</span><span class="kpi-unit">+</span></div>
+        <div class="kpi-label">Years Product Life</div>
+      </div>
+      <div class="kpi-card fade-up" style="transition-delay:0.4s">
+        <div class="kpi-value"><span class="kpi-num" data-target="94">0</span><span class="kpi-unit">%</span></div>
+        <div class="kpi-label">Light Transmission</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <svg width="18" height="28" viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="16" height="26" rx="8" stroke="white" stroke-width="1.5"/>
+      <rect x="7.5" y="5" width="3" height="7" rx="1.5" fill="white"/>
+    </svg>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ OVERVIEW ══════════════════════════════ -->
+<section id="overview">
+  <div class="section-inner">
+    <div class="overview-grid">
+      <div class="overview-visual fade-up">
+        <div class="overview-visual-inner">
+          <!-- Inline factory SVG illustration -->
+          <svg class="factory-svg" viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sky/background -->
+            <rect width="400" height="260" fill="none"/>
+            <!-- Factory building -->
+            <rect x="40" y="110" width="320" height="130" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <!-- Chimneys -->
+            <rect x="70" y="70" width="24" height="45" rx="3" fill="rgba(14,107,87,0.5)" stroke="rgba(14,107,87,0.8)" stroke-width="1"/>
+            <rect x="110" y="55" width="20" height="60" rx="3" fill="rgba(14,107,87,0.4)" stroke="rgba(14,107,87,0.7)" stroke-width="1"/>
+            <rect x="300" y="75" width="22" height="40" rx="3" fill="rgba(14,107,87,0.45)" stroke="rgba(14,107,87,0.7)" stroke-width="1"/>
+            <!-- Steam wisps -->
+            <path d="M82 68 Q86 55 80 42 Q74 29 82 16" stroke="rgba(255,255,255,0.2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M120 53 Q124 40 118 27" stroke="rgba(255,255,255,0.15)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Main roof / sawtooth -->
+            <polyline points="40,110 80,80 120,110 160,80 200,110 240,80 280,110 320,80 360,110" stroke="rgba(14,107,87,0.8)" stroke-width="2" fill="rgba(14,107,87,0.1)"/>
+            <!-- Windows / production lines -->
+            <rect x="60" y="130" width="40" height="30" rx="2" fill="rgba(237,132,30,0.15)" stroke="rgba(237,132,30,0.3)" stroke-width="1"/>
+            <rect x="115" y="130" width="40" height="30" rx="2" fill="rgba(14,107,87,0.2)" stroke="rgba(14,107,87,0.4)" stroke-width="1"/>
+            <rect x="170" y="130" width="40" height="30" rx="2" fill="rgba(237,132,30,0.15)" stroke="rgba(237,132,30,0.3)" stroke-width="1"/>
+            <rect x="225" y="130" width="40" height="30" rx="2" fill="rgba(14,107,87,0.2)" stroke="rgba(14,107,87,0.4)" stroke-width="1"/>
+            <rect x="280" y="130" width="40" height="30" rx="2" fill="rgba(237,132,30,0.1)" stroke="rgba(237,132,30,0.25)" stroke-width="1"/>
+            <!-- Glass panels on roof (solar symbolic) -->
+            <rect x="150" y="82" width="30" height="22" rx="2" fill="rgba(14,107,87,0.3)" stroke="rgba(79,201,168,0.5)" stroke-width="1"/>
+            <rect x="190" y="82" width="30" height="22" rx="2" fill="rgba(14,107,87,0.3)" stroke="rgba(79,201,168,0.5)" stroke-width="1"/>
+            <line x1="165" y1="82" x2="165" y2="104" stroke="rgba(79,201,168,0.4)" stroke-width="0.5"/>
+            <line x1="150" y1="93" x2="180" y2="93" stroke="rgba(79,201,168,0.4)" stroke-width="0.5"/>
+            <line x1="205" y1="82" x2="205" y2="104" stroke="rgba(79,201,168,0.4)" stroke-width="0.5"/>
+            <line x1="190" y1="93" x2="220" y2="93" stroke="rgba(79,201,168,0.4)" stroke-width="0.5"/>
+            <!-- Door -->
+            <rect x="180" y="195" width="40" height="45" rx="2" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <!-- Ground line -->
+            <line x1="0" y1="240" x2="400" y2="240" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <!-- Sun / energy rays -->
+            <circle cx="350" cy="40" r="18" fill="rgba(237,132,30,0.2)" stroke="rgba(237,132,30,0.4)" stroke-width="1"/>
+            <circle cx="350" cy="40" r="12" fill="rgba(237,132,30,0.35)"/>
+            <line x1="350" y1="14" x2="350" y2="10" stroke="rgba(237,132,30,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="350" y1="66" x2="350" y2="70" stroke="rgba(237,132,30,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="324" y1="40" x2="320" y2="40" stroke="rgba(237,132,30,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="376" y1="40" x2="380" y2="40" stroke="rgba(237,132,30,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="331" y1="21" x2="328" y2="18" stroke="rgba(237,132,30,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="369" y1="59" x2="372" y2="62" stroke="rgba(237,132,30,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- INDOSOL text on building -->
+            <text x="200" y="175" font-family="sans-serif" font-size="11" font-weight="bold" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="4">INDOSOL SOLAR</text>
+          </svg>
+        </div>
+        <div class="overview-visual-label">Andhra Pradesh, India — Facility Under Development</div>
+      </div>
+
+      <div class="fade-up" style="transition-delay:0.15s">
+        <div class="section-eyebrow">The Facility</div>
+        <h2 class="section-title">Powering India's Solar Manufacturing <span class="title-accent">Ecosystem</span></h2>
+        <p class="section-lead">
+          Indosol Solar's world-class solar glass manufacturing facility is set to strengthen India's renewable energy ecosystem. Designed with advanced technology and large-scale production capabilities, the plant plays a vital role in supporting India's growing solar manufacturing sector.
+        </p>
+        <p style="margin-top:1.2rem; font-size:0.95rem; color:rgba(30,30,30,0.5); line-height:1.8;">
+          The facility features advanced Solar Patterned Glass manufacturing lines with a production capacity of <strong style="color:rgba(20,20,20,0.85);">2,400 Tonnes Per Day</strong>, equivalent to supporting <strong style="color:rgba(20,20,20,0.85);">10 GW</strong> of solar module manufacturing annually. High-performance solar PV glass enhancing module efficiency, durability, and long-term reliability.
+        </p>
+        <div class="overview-stats">
+          <div class="stat-block">
+            <div class="num">2,400</div>
+            <div class="desc">Tonnes Per Day Capacity</div>
+          </div>
+          <div class="stat-block">
+            <div class="num">10 GW</div>
+            <div class="desc">Annual Module Support</div>
+          </div>
+          <div class="stat-block">
+            <div class="num">≥94%</div>
+            <div class="desc">Light Transmission Rate</div>
+          </div>
+          <div class="stat-block">
+            <div class="num">30+</div>
+            <div class="desc">Year Design Life</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ WHY INDOSOL ═══════════════════════════ -->
+<section id="why">
+  <div class="section-inner">
+    <div class="why-header fade-up">
+      <div class="section-eyebrow">Our Advantage</div>
+      <h2 class="section-title">Engineered For Performance.<br><span class="title-accent">Built For The Future.</span></h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card fade-up" style="transition-delay:0.05s">
+        <div class="feature-icon">🔬</div>
+        <h3>Ultra-Clear Solar Glass</h3>
+        <p>Exceptional clarity and purity engineered for maximum solar energy transmission, manufactured from premium raw materials with minimal iron content.</p>
+      </div>
+      <div class="feature-card fade-up" style="transition-delay:0.1s">
+        <div class="feature-icon">✨</div>
+        <h3>ARC Coated Technology</h3>
+        <p>Advanced double-layer anti-reflective coating dramatically increases light absorption and photovoltaic module efficiency through precision nano-engineering.</p>
+      </div>
+      <div class="feature-card fade-up" style="transition-delay:0.15s">
+        <div class="feature-icon">🛡️</div>
+        <h3>Superior Durability</h3>
+        <p>Designed for harsh environments with exceptional thermal and weather resistance, maintaining performance under extreme heat, humidity, and UV radiation.</p>
+      </div>
+      <div class="feature-card fade-up" style="transition-delay:0.2s">
+        <div class="feature-icon">⚡</div>
+        <h3>Future Ready</h3>
+        <p>Fully compatible with Mono-PERC, TOPCon, HJT and next-generation bifacial PV technologies, ensuring long-term relevance in a rapidly evolving market.</p>
+      </div>
+      <div class="feature-card fade-up" style="transition-delay:0.25s">
+        <div class="feature-icon">🌐</div>
+        <h3>Global Standards</h3>
+        <p>Manufactured under stringent international quality control systems, meeting IEC, EN, and leading global standards for solar photovoltaic glass.</p>
+      </div>
+      <div class="feature-card fade-up" style="transition-delay:0.3s">
+        <div class="feature-icon">🌱</div>
+        <h3>Sustainable Manufacturing</h3>
+        <p>Environmentally responsible production processes — 100% recyclable glass, lead-free ink systems, and practices supporting India's clean energy goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ PRODUCTS ══════════════════════════════ -->
+<section id="products">
+  <div class="section-inner">
+    <div class="products-header fade-up">
+      <div class="section-eyebrow">Product Portfolio</div>
+      <h2 class="section-title">Advanced Solar Glass <span class="title-accent">Solutions</span></h2>
+    </div>
+
+    <div class="products-grid">
+      <!-- Product 01 -->
+      <div class="product-card fade-up" style="transition-delay:0.05s">
+        <div class="product-visual pv-1">
+          <div class="product-visual-label">Product 01</div>
+          <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="120" height="120" rx="4" stroke="rgba(79,201,168,0.4)" stroke-width="1.5" fill="rgba(14,107,87,0.15)"/>
+            <rect x="20" y="20" width="100" height="100" rx="3" stroke="rgba(79,201,168,0.25)" stroke-width="1" fill="none"/>
+            <g stroke="rgba(79,201,168,0.3)" stroke-width="0.8" fill="none">
+              <path d="M10 30 L130 30"/>
+              <path d="M10 50 L130 50"/>
+              <path d="M10 70 L130 70"/>
+              <path d="M10 90 L130 90"/>
+              <path d="M10 110 L130 110"/>
+              <path d="M30 10 L30 130"/>
+              <path d="M50 10 L50 130"/>
+              <path d="M70 10 L70 130"/>
+              <path d="M90 10 L90 130"/>
+              <path d="M110 10 L110 130"/>
+            </g>
+            <circle cx="70" cy="70" r="25" stroke="rgba(237,132,30,0.4)" stroke-width="1.5" fill="rgba(237,132,30,0.06)"/>
+            <circle cx="70" cy="70" r="8" fill="rgba(237,132,30,0.3)" stroke="rgba(237,132,30,0.6)" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-num">Product 01</div>
+          <h3>Ultra-Clear Patterned Solar Glass</h3>
+          <p>Manufactured from high-quality raw materials ensuring exceptional clarity and purity. Precision-engineered embossing patterns maximize light transmittance and optical performance for photovoltaic modules.</p>
+          <ul class="product-highlights">
+            <li>High Transparency</li>
+            <li>Enhanced Light Capture</li>
+            <li>Superior Optical Clarity</li>
+            <li>Long Service Life (&gt;30 Years)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product 02 -->
+      <div class="product-card fade-up" style="transition-delay:0.15s">
+        <div class="product-visual pv-2">
+          <div class="product-visual-label">Product 02</div>
+          <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="120" height="120" rx="4" stroke="rgba(237,132,30,0.5)" stroke-width="1.5" fill="rgba(100,50,0,0.2)"/>
+            <!-- ARC coating layers visualization -->
+            <rect x="15" y="55" width="110" height="8" rx="1" fill="rgba(237,132,30,0.3)" stroke="rgba(237,132,30,0.5)" stroke-width="0.5"/>
+            <rect x="15" y="67" width="110" height="6" rx="1" fill="rgba(237,132,30,0.2)" stroke="rgba(237,132,30,0.4)" stroke-width="0.5"/>
+            <rect x="15" y="77" width="110" height="35" rx="1" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+            <!-- Light rays bouncing -->
+            <path d="M30 20 L50 55 L30 55" stroke="rgba(255,255,180,0.5)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <path d="M70 20 L90 55 L70 55" stroke="rgba(255,255,180,0.5)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <path d="M110 20 L130 55 L110 55" stroke="rgba(255,255,180,0.4)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <text x="70" y="48" font-size="8" fill="rgba(237,132,30,0.8)" text-anchor="middle" font-family="sans-serif">≥ 94%</text>
+            <text x="70" y="57" font-size="6" fill="rgba(237,132,30,0.6)" text-anchor="middle" font-family="sans-serif">TRANSMISSION</text>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-num">Product 02</div>
+          <h3>ARC Solar Pattern Glass / Front Glass</h3>
+          <p>Produced using advanced double-layer anti-reflective coating technology that significantly reduces reflection and increases solar energy transmission for higher module power output.</p>
+          <ul class="product-highlights">
+            <li>≥94% Light Transmission</li>
+            <li>Double-Layer ARC Coating</li>
+            <li>Thermal Stability</li>
+            <li>High Module Efficiency</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product 03 -->
+      <div class="product-card fade-up" style="transition-delay:0.25s">
+        <div class="product-visual pv-3">
+          <div class="product-visual-label">Product 03</div>
+          <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="120" height="120" rx="4" stroke="rgba(60,100,170,0.5)" stroke-width="1.5" fill="rgba(20,50,120,0.2)"/>
+            <!-- Screen printing pattern -->
+            <rect x="15" y="15" width="110" height="15" rx="2" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+            <rect x="15" y="110" width="110" height="15" rx="2" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+            <rect x="15" y="15" width="15" height="110" rx="2" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+            <rect x="110" y="15" width="15" height="110" rx="2" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+            <!-- Grid dots -->
+            <circle cx="50" cy="60" r="2" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="70" cy="60" r="2" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="90" cy="60" r="2" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="50" cy="80" r="2" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="70" cy="80" r="2" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="90" cy="80" r="2" fill="rgba(255,255,255,0.25)"/>
+            <text x="70" y="47" font-size="7" fill="rgba(100,150,220,0.7)" text-anchor="middle" font-family="sans-serif" letter-spacing="2">SCREEN PRINTED</text>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-num">Product 03</div>
+          <h3>Screen Printed Solar Glass / Back Glass</h3>
+          <p>Engineered with high-precision ceramic screen printing technology using lead-free ink to enhance reflection, durability, and photovoltaic module performance for bifacial applications.</p>
+          <ul class="product-highlights">
+            <li>Precision Screen Printing</li>
+            <li>Excellent Adhesion After Tempering</li>
+            <li>Weather Resistant</li>
+            <li>Bi-Facial Module Compatible</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ SPECS ════════════════════════════════ -->
+<section id="specs">
+  <div class="section-inner">
+    <div class="fade-up" style="text-align:center; margin-bottom:4rem;">
+      <div class="section-eyebrow">Technical Data</div>
+      <h2 class="section-title">Technical <span class="title-accent">Specifications</span></h2>
+    </div>
+
+    <!-- Front Glass Spec -->
+    <div class="spec-section fade-up">
+      <div class="spec-table-wrap">
+        <div class="spec-table-header">
+          <h3>Front Glass — Ultra Clear ARC Solar Pattern Glass</h3>
+          <a href="#" class="spec-download-btn" onclick="return false;">↓ Download PDF</a>
+        </div>
+        <div class="spec-search">
+          <input type="text" id="frontSearch" placeholder="Search specifications..." oninput="filterTable('frontTable', this.value)">
+        </div>
+        <table class="spec-table" id="frontTable">
+          <tbody>
+            <tr><td>Product Type</td><td>Ultra Clear Solar Pattern Glass</td></tr>
+            <tr><td>Glass Type</td><td>Heat Strengthened / Tempered Solar Glass</td></tr>
+            <tr><td>Thickness</td><td class="spec-highlight">2.0 ± 0.1 mm</td></tr>
+            <tr><td>Density</td><td>2.5020 ± 0.0010 g/cm³</td></tr>
+            <tr><td>Light Transmission</td><td class="spec-highlight">≥ 94.0% (After ARC Coating)</td></tr>
+            <tr><td>Surface Pattern</td><td>High Precision Solar Embossed Pattern</td></tr>
+            <tr><td>Haze</td><td>Optimized for Enhanced Light Capture</td></tr>
+            <tr><td>Mechanical Strength</td><td>Suitable for Thermal Tempering</td></tr>
+            <tr><td>Thermal Shock Resistance</td><td>Excellent</td></tr>
+            <tr><td>UV Resistance</td><td>Excellent Long-Term Stability</td></tr>
+            <tr><td>Weather Resistance</td><td>Resistant to Heat, Humidity and Harsh Environmental Conditions</td></tr>
+            <tr><td>Flatness</td><td>High Flatness for Automated Module Production</td></tr>
+            <tr><td>Surface Quality</td><td>Low Defect Surface with Superior Optical Clarity</td></tr>
+            <tr><td>Module Compatibility</td><td>Mono-PERC, TOPCon, HJT and Future PV Technologies</td></tr>
+            <tr><td>Service Life</td><td class="spec-highlight">More than 30 Years</td></tr>
+            <tr><td>Sustainability</td><td>100% Recyclable Glass</td></tr>
+            <tr><td>Application</td><td>Front Cover Glass for Photovoltaic Solar Modules</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Back Glass Spec -->
+    <div class="spec-section fade-up" style="transition-delay:0.2s;">
+      <div class="spec-table-wrap">
+        <div class="spec-table-header">
+          <h3>Back Glass — Screen Printed Solar Glass</h3>
+          <a href="#" class="spec-download-btn" onclick="return false;">↓ Download PDF</a>
+        </div>
+        <div class="spec-search">
+          <input type="text" id="backSearch" placeholder="Search specifications..." oninput="filterTable('backTable', this.value)">
+        </div>
+        <table class="spec-table" id="backTable">
+          <tbody>
+            <tr><td>Product Type</td><td>Screen Printed Solar Glass</td></tr>
+            <tr><td>Base Glass</td><td>Ultra Clear Solar Pattern Glass</td></tr>
+            <tr><td>Thickness</td><td class="spec-highlight">2.0 ± 0.1 mm</td></tr>
+            <tr><td>Printing Technology</td><td>High Precision Ceramic Screen Printing</td></tr>
+            <tr><td>Print Ink Type</td><td>Lead-Free Ceramic Frit Ink</td></tr>
+            <tr><td>Print Color</td><td>White / Customized Colors</td></tr>
+            <tr><td>Print Pattern</td><td>Customized Border, Grid, Logo and Identification Markings</td></tr>
+            <tr><td>Print Accuracy</td><td>High Precision with Excellent Edge Definition</td></tr>
+            <tr><td>Adhesion Strength</td><td>Excellent Permanent Bond after Tempering</td></tr>
+            <tr><td>Scratch Resistance</td><td>High</td></tr>
+            <tr><td>Chemical Resistance</td><td>Excellent</td></tr>
+            <tr><td>UV Resistance</td><td>Excellent Long-Term Stability</td></tr>
+            <tr><td>Thermal Stability</td><td>Suitable for High Temperature Tempering</td></tr>
+            <tr><td>Weather Resistance</td><td>Resistant to Heat, Humidity, UV Radiation and Harsh Outdoor Conditions</td></tr>
+            <tr><td>Surface Quality</td><td>Uniform Print Distribution with Superior Visual Appearance</td></tr>
+            <tr><td>Color Consistency</td><td>Excellent Batch-to-Batch Uniformity</td></tr>
+            <tr><td>Mechanical Strength</td><td>Suitable for Tempered Solar Module Applications</td></tr>
+            <tr><td>Module Compatibility</td><td>Mono-PERC, TOPCon, HJT and Future PV Technologies</td></tr>
+            <tr><td>Service Life</td><td class="spec-highlight">More than 30 Years</td></tr>
+            <tr><td>Sustainability</td><td class="spec-highlight">Lead-Free and Environmentally Responsible Printing Process</td></tr>
+            <tr><td>Application</td><td>Back Cover Glass for Bi-Facial Photovoltaic Solar Modules</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ PROCESS ═══════════════════════════════ -->
+<section id="process">
+  <div class="section-inner">
+    <div class="process-header fade-up">
+      <div class="section-eyebrow">Manufacturing Technology</div>
+      <h2 class="section-title">Advanced Manufacturing <span class="title-accent">Excellence</span></h2>
+      <p class="section-lead" style="margin: 0 auto; color: rgba(30,30,30,0.55);">Every pane of Indosol Solar glass passes through a precisely controlled eight-stage manufacturing workflow, combining raw material science with precision automation.</p>
+    </div>
+
+    <div class="process-timeline" id="processTimeline">
+      <div class="process-step fade-up" style="transition-delay:0.05s">
+        <div class="step-content">
+          <h4>Raw Material Selection</h4>
+          <p>High-purity silica sand, soda ash, limestone, and refining agents are sourced and tested to strict composition standards.</p>
+        </div>
+        <div class="step-node">01</div>
+        <div class="step-spacer"></div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:0.1s">
+        <div class="step-spacer"></div>
+        <div class="step-node">02</div>
+        <div class="step-content">
+          <h4>Glass Melting</h4>
+          <p>Batch materials are melted at temperatures exceeding 1,500°C in advanced float glass furnaces for complete homogenisation.</p>
+        </div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:0.15s">
+        <div class="step-content">
+          <h4>Pattern Formation</h4>
+          <p>Molten glass passes through precision-engineered rollers that imprint optimised solar emboss patterns for maximum light capture.</p>
+        </div>
+        <div class="step-node">03</div>
+        <div class="step-spacer"></div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:0.2s">
+        <div class="step-spacer"></div>
+        <div class="step-node">04</div>
+        <div class="step-content">
+          <h4>ARC Coating Application</h4>
+          <p>Double-layer nano anti-reflective coating is applied through chemical vapour deposition, boosting light transmission above 94%.</p>
+        </div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:0.25s">
+        <div class="step-content">
+          <h4>Thermal Tempering</h4>
+          <p>Glass is rapidly heated and quenched to develop compressive surface stress, achieving heat-strengthened or fully tempered specifications.</p>
+        </div>
+        <div class="step-node">05</div>
+        <div class="step-spacer"></div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:0.3s">
+        <div class="step-spacer"></div>
+        <div class="step-node">06</div>
+        <div class="step-content">
+          <h4>Precision Inspection</h4>
+          <p>Automated optical inspection systems scan every surface for defects, dimensional accuracy, and coating uniformity.</p>
+        </div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:0.35s">
+        <div class="step-content">
+          <h4>Quality Testing</h4>
+          <p>Transmission, haze, adhesion, thermal shock, and weather resistance are validated against IEC and international standards.</p>
+        </div>
+        <div class="step-node">07</div>
+        <div class="step-spacer"></div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:0.4s">
+        <div class="step-spacer"></div>
+        <div class="step-node">08</div>
+        <div class="step-content">
+          <h4>Global Standard Certification</h4>
+          <p>Certified batches are packed in engineered crating systems and dispatched to solar module manufacturers worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ QUALITY ═══════════════════════════════ -->
+<section id="quality">
+  <div class="section-inner">
+    <div class="fade-up" style="text-align:center;">
+      <div class="section-eyebrow">Quality & Sustainability</div>
+      <h2 class="section-title">Built To <span class="title-accent">Global Standards</span></h2>
+    </div>
+    <div class="quality-grid">
+      <div class="quality-card fade-up" style="transition-delay:0.05s">
+        <div class="quality-card-inner">
+          <span class="quality-icon">🔍</span>
+          <h3>Quality Assurance</h3>
+          <p>Advanced automated testing systems ensure consistent performance and reliability across every production batch, meeting the most demanding international quality benchmarks.</p>
+        </div>
+      </div>
+      <div class="quality-card fade-up" style="transition-delay:0.1s">
+        <div class="quality-card-inner">
+          <span class="quality-icon">🌿</span>
+          <h3>Environmental Responsibility</h3>
+          <p>Sustainable manufacturing practices — including 100% recyclable glass bodies, lead-free printing processes, and waste reduction systems — minimise environmental impact.</p>
+        </div>
+      </div>
+      <div class="quality-card fade-up" style="transition-delay:0.15s">
+        <div class="quality-card-inner">
+          <span class="quality-icon">🕰️</span>
+          <h3>Long-Term Reliability</h3>
+          <p>Products engineered for more than 30 years of operational life in outdoor PV installations, supported by rigorous accelerated weathering and durability testing.</p>
+        </div>
+      </div>
+      <div class="quality-card fade-up" style="transition-delay:0.2s">
+        <div class="quality-card-inner">
+          <span class="quality-icon">🇮🇳</span>
+          <h3>Future Energy Ready</h3>
+          <p>Supporting India's Aatmanirbhar solar manufacturing ecosystem — helping the nation reduce dependence on imported solar glass and strengthen domestic PV supply chains.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ CTA BANNER ════════════════════════════ -->
+<section id="cta">
+  <div class="cta-inner">
+    <div class="section-eyebrow fade-up" style="justify-content:center; display:flex;">India's Solar Glass Future</div>
+    <h2 class="fade-up">Shaping The Future<br>Of <span class="title-accent">Solar Energy</span></h2>
+    <p class="fade-up">Discover how Indosol Solar's advanced solar glass solutions are enabling next-generation photovoltaic technologies and powering India's clean energy transition.</p>
+    <div class="cta-actions fade-up">
+      <a href="#specs" class="btn-primary">Download Brochure</a>
+      <a href="mailto:sales@indosolsolar.com" class="btn-outline">Contact Sales Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FAQ ═══════════════════════════════════ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="fade-up" style="text-align:center; margin-bottom:3.5rem;">
+      <div class="section-eyebrow">Common Questions</div>
+      <h2 class="section-title">Frequently Asked <span class="title-accent">Questions</span></h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item fade-up">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span>What is solar patterned glass?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">Solar patterned glass is a specialised glass used as the front cover in photovoltaic modules. Its precision-embossed surface texture scatters and captures light more effectively than flat glass, reducing surface reflection and directing more photons toward the solar cells beneath. This improves module power output without increasing module area.</div>
+        </div>
+      </div>
+      <div class="faq-item fade-up" style="transition-delay:0.05s">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span>What is ARC solar glass and how does it work?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">ARC (Anti-Reflective Coated) solar glass features a nano-scale coating applied to the glass surface that minimises light reflected away from the module. The double-layer coating creates destructive interference for reflected light waves, allowing more solar energy to pass through. Indosol Solar's ARC glass achieves ≥94% light transmission, directly increasing the watt-peak output of the finished solar module.</div>
+        </div>
+      </div>
+      <div class="faq-item fade-up" style="transition-delay:0.1s">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span>What are the advantages of ultra-clear solar glass over standard glass?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">Ultra-clear solar glass uses low-iron raw materials that eliminate the greenish tint found in standard float glass. This allows significantly more light in the 350–1200nm wavelength range — the spectrum most efficiently converted by solar cells — to reach the photovoltaic layer. The result is higher module efficiency, better performance in diffuse light conditions, and superior long-term power stability.</div>
+        </div>
+      </div>
+      <div class="faq-item fade-up" style="transition-delay:0.15s">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span>What solar module technologies are supported by Indosol Solar glass?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">Indosol Solar glass is engineered to be compatible with all mainstream and emerging photovoltaic cell technologies, including Mono-PERC, TOPCon (Tunnel Oxide Passivated Contact), HJT (Heterojunction Technology), and bifacial module designs. The glass specifications are also designed to be compatible with future cell architectures such as perovskite-silicon tandems as the industry evolves.</div>
+        </div>
+      </div>
+      <div class="faq-item fade-up" style="transition-delay:0.2s">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span>How long does Indosol Solar glass last in the field?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">Indosol Solar glass is designed for a service life of more than 30 years in outdoor photovoltaic installations. The glass is validated through accelerated weathering tests including damp heat (85°C, 85% RH for 1,000 hours), UV exposure, thermal cycling, and hail impact simulation — all conducted in accordance with IEC 61215 and IEC 61730 standards.</div>
+        </div>
+      </div>
+      <div class="faq-item fade-up" style="transition-delay:0.25s">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span>What is the production capacity of the Indosol Solar facility?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">The Indosol Solar manufacturing facility is designed for a production capacity of 2,400 Tonnes Per Day (TPD) of solar glass. This output is sufficient to support approximately 10 GW of solar module manufacturing capacity per year, making it one of the largest dedicated solar glass manufacturing plants in India and positioning the company as a critical supplier within the domestic and global solar supply chain.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FOOTER ════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <div class="nav-logo-mark">IS</div>
+        <div class="nav-logo-text">INDOSOL <span>SOLAR</span></div>
+      </div>
+      <p>India's next-generation solar glass manufacturing facility. Building the foundation of India's renewable energy future through world-class solar PV glass production.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Products</h5>
+      <ul>
+        <li><a href="#products">Ultra-Clear Pattern Glass</a></li>
+        <li><a href="#products">ARC Front Glass</a></li>
+        <li><a href="#products">Screen Printed Back Glass</a></li>
+        <li><a href="#specs">Technical Specifications</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#overview">About Indosol</a></li>
+        <li><a href="#process">Technology</a></li>
+        <li><a href="#quality">Quality</a></li>
+        <li><a href="#cta">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:sales@indosolsolar.com">Sales Enquiries</a></li>
+        <li><a href="mailto:info@indosolsolar.com">General Information</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Indosol Solar. All rights reserved.</span>
+    <span class="footer-badge">Solar Glass Manufacturers — India</span>
+    <span>Privacy Policy · Terms of Use</span>
+  </div>
+</footer>
+
+<script>
+// ── Intersection Observer for fade-up animations ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── Counter animations ──
+const counters = document.querySelectorAll('.kpi-num');
+let countersStarted = false;
+const heroObs = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting && !countersStarted) {
+    countersStarted = true;
+    counters.forEach(el => {
+      const target = parseInt(el.dataset.target, 10);
+      const duration = 1800;
+      const start = performance.now();
+      function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target).toLocaleString();
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+}, { threshold: 0.5 });
+const heroSection = document.getElementById('hero');
+if (heroSection) heroObs.observe(heroSection);
+
+// ── FAQ accordion ──
+function toggleFAQ(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ── Spec table search/filter ──
+function filterTable(tableId, query) {
+  const table = document.getElementById(tableId);
+  if (!table) return;
+  const rows = table.querySelectorAll('tr');
+  const q = query.toLowerCase().trim();
+  rows.forEach(row => {
+    row.style.display = (!q || row.textContent.toLowerCase().includes(q)) ? '' : 'none';
+  });
+}
+
+// ── Sticky nav transparency ──
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 60) {
+    nav.style.background = 'rgba(0,46,34,0.98)';
+  } else {
+    nav.style.background = 'rgba(0,70,56,0.85)';
+  }
+}, { passive: true });
+
+// ── Smooth parallax on hero orbs ──
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  const orbs = document.querySelectorAll('.orb');
+  orbs.forEach((orb, i) => {
+    const speed = (i + 1) * 0.15;
+    orb.style.transform = `translateY(${y * speed}px)`;
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
